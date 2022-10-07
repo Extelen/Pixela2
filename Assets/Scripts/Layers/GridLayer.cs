@@ -52,7 +52,6 @@ public class GridLayer : MonoBehaviour, ILayer
             for (int y = 0; y < m_texture.height; y++)
             {
                 Color color = (x + y) % 2 == 0 ? colorA : colorB;
-
                 m_texture.SetPixel(x, y, color);
             }
         }

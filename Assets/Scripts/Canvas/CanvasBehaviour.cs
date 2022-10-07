@@ -52,6 +52,11 @@ public class CanvasBehaviour : MonoBehaviour
     /// <param name="height"> The height to set to the canvas </param>
     public void Initialize(int width, int height)
     {
+        if (initialized)
+        {
+            m_layersBehaviour.RemoveAllLayers();
+        }
+
         initialized = true;
 
         CanvasBehaviour.size = new Vector2Int(width, height);
